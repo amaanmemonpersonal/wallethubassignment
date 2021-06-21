@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Upstox Pro Web Login Test Suite]">
+  <parameter name="baseDirPath" value="./Report/"/>
+  <parameter name="screenshotDirName" value="./ScreenShot/"/>
+  <parameter name="url" value="https://www.facebook.com/"/>
+  <test name="Test(failed)">
+    <classes>
+      <class name="page.test.FacebookTest">
+        <methods>
+          <include name="login"/>
+          <include name="beforeclass"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="nameBefore"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- page.test.FacebookTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Upstox Pro Web Login Test Suite] -->
