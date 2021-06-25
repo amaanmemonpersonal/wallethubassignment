@@ -2,10 +2,10 @@
 <suite name="Upstox Pro Web Login Test Suite">
 <parameter name="baseDirPath" value="./Report/"/>
 <parameter name="screenshotDirName" value="./ScreenShot/"/>
-<parameter name="url" value="https://www.facebook.com/"/>
+<parameter name="url" value="https://wallethub.com/join/light"/>
 <test name="Test">
 <classes>
-    <class name="page.test.FacebookTest"/>
+    <class name="page.test.WallethubTest"/>
 </classes>
 </test>
 </suite> 

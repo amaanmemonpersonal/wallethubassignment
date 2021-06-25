@@ -3,19 +3,19 @@
 <suite name="Failed suite [Upstox Pro Web Login Test Suite]">
   <parameter name="baseDirPath" value="./Report/"/>
   <parameter name="screenshotDirName" value="./ScreenShot/"/>
-  <parameter name="url" value="https://www.facebook.com/"/>
+  <parameter name="url" value="https://wallethub.com/join/light"/>
   <test name="Test(failed)">
     <classes>
-      <class name="page.test.FacebookTest">
+      <class name="page.test.WallethubTest">
         <methods>
-          <include name="login"/>
+          <include name="InsuranceCompanyPage"/>
           <include name="beforeclass"/>
           <include name="tearDown"/>
           <include name="setup"/>
           <include name="nameBefore"/>
           <include name="afterMethod"/>
         </methods>
-      </class> <!-- page.test.FacebookTest -->
+      </class> <!-- page.test.WallethubTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Upstox Pro Web Login Test Suite] -->

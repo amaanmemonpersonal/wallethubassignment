@@ -6,11 +6,13 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import org.apache.commons.lang3.RandomStringUtils;
+
 public class Utils {
     private static final String[] WIN_RUNTIME = { "cmd.exe", "/C" };
     private static final String[] OS_LINUX_RUNTIME = { "/bin/bash", "-l", "-c" };
 
-    private Utils() {
+    public Utils() {
     }
 
     private static <T> T[] concat(T[] first, T[] second) {
@@ -50,5 +52,14 @@ public class Utils {
             e.printStackTrace();
             return null;
         }
+    }
+    
+    public static String generateRandomString(int length) {
+    	 
+        boolean useLetters = false;
+        boolean useNumbers = true;
+        String generatedString = RandomStringUtils.random(length, useLetters, useNumbers);
+        System.out.println(generatedString);
+        return generatedString;
     }
 }

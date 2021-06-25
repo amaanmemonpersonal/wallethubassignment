@@ -7,6 +7,7 @@ import java.util.NoSuchElementException;
 import java.util.Properties;
 import java.util.TimeZone;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import com.relevantcodes.extentreports.LogStatus;
@@ -33,6 +34,23 @@ public class BasePageActions extends BaseTest {
 			WebDriverWait wait = new WebDriverWait(driver, 20);
 			wait.until(ExpectedConditions.visibilityOf(locator));
 			locator.click();
+			extentTest.log(LogStatus.PASS, description, tc);
+		} catch (NoSuchElementException e) {
+			extentTest.log(LogStatus.FAIL, description, tc);
+		}catch (Exception e) {
+			e.printStackTrace();
+			System.out.println(locator + e.getMessage());
+			extentTest.log(LogStatus.FAIL, description, tc);
+		}
+	}
+	
+	public static void hover_and_click(WebElement locator, String description, String tc) {
+		try {
+			Actions actions = new Actions(driver);
+			WebDriverWait wait = new WebDriverWait(driver, 20);
+			wait.until(ExpectedConditions.visibilityOf(locator));
+			actions.moveToElement(locator);
+			actions.click().build().perform();
 			extentTest.log(LogStatus.PASS, description, tc);
 		} catch (NoSuchElementException e) {
 			extentTest.log(LogStatus.FAIL, description, tc);
